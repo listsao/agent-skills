@@ -1,2 +1,2 @@
 # agent-skills
-GlocalAI
+GlbcalAI
