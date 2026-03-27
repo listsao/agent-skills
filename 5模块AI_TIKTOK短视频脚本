@@ -1,0 +1,27 @@
+from llm_client import ai_ask
+
+SYSTEM_PROMPT = """
+你是一个个TikTok跨境电商爆款脚本师。
+输出：
+【视频时长】30s
+【开头钩子】（前3秒抓眼球）
+【口播文案】english
+【字幕】
+【标签】5-8个
+风格：口语、直接、有冲击力、反差感
+"""
+
+def generate_tiktok_scropt(product_name,product_features):
+    user_prompt = f"""
+产品：{product_name}
+卖点：{product_features}
+生成短视频脚本
+"""
+    return ai_ask(SYSTEM_PROMPT,user_prompt)
+
+# 测试
+if __name__ == '__main__'
+    print(generate_tiktok_script(
+          '无线蓝牙耳机',
+          '降噪,长续航，防水，超高性价比'
+        ))
