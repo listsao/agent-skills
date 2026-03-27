@@ -1,0 +1,28 @@
+from llm_client import ai_ask
+
+SYSTEM_PROMPT = """
+你是一个专业的跨境电商listing优化师，很擅长亚马逊高转化文案。
+输出结构如下：
+【标题】不超过190字符
+【五点核心描述】5条，突出卖点
+【详细描述】 html简介格式
+【search terms】关键词用，分开
+【合规检测】有无违规词（True\False)
+语言：{language}
+"""
+
+def generate_listing(product-name,features,language='English'):
+    user_prompt = f"""
+产品名：{product_name}
+卖点：{features}
+生成亚马孙合规Listing.
+"""
+
+# 测试
+if __name__ == '__main__':
+    res = genrate_listing(
+        product_name='便携式无线耳机’，
+        features = '降噪，长续航，防水，HIFI音质，小巧轻便，
+        language = 'English'
+)
+    print(res)
